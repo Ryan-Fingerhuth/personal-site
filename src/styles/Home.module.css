@@ -6,11 +6,6 @@
   font-family: 'Pokemon Generation 1';
 }
 
-@font-face {
-  font-family: 'Pokemon Generation 1';
-  src: url('/public/fonts/PokemonGenerationOne.ttf');
-}
-
 .list {
   display: grid;
   grid-template-columns: repeat(1, minmax(33%, auto));

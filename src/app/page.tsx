@@ -1,85 +1,157 @@
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import styles from './page.module.css';
+'use client';
 
-const inter = Inter({ subsets: ['latin'] });
+import Image from 'next/image';
+import LinkImage from './link-image';
+import styles from './page.module.css';
+import { useState } from 'react';
 
 export default function Home() {
+  const [link1Hover, setLink1Hover] = useState(false);
+  const [link2Hover, setLink2Hover] = useState(false);
+  const [link3Hover, setLink3Hover] = useState(false);
+  const [link4Hover, setLink4Hover] = useState(false);
+  const [link5Hover, setLink5Hover] = useState(false);
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer">
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div className={styles.header}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className={styles.spritePreFix}
+          src="/trainer-walking.png"
+          alt="trainer"
+          width={16}
+          height={16}
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+        Ryan Fingerhuth
       </div>
 
-      <div className={styles.grid}>
+      <div className={styles.list}>
         <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          onMouseEnter={() => setLink1Hover(true)}
+          onMouseLeave={() => setLink1Hover(false)}
           className={styles.card}
+          href="https://www.linkedin.com/in/ryan-fingerhuth/"
           target="_blank"
           rel="noopener noreferrer">
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
+          {link1Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-bird'}
+              hover={true}
+            />
+          )}
+          {!link1Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-bird'}
+              hover={false}
+            />
+          )}
+          LinkedIn
         </a>
-
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          onMouseEnter={() => setLink2Hover(true)}
+          onMouseLeave={() => setLink2Hover(false)}
           className={styles.card}
+          href="https://github.com/Ryan-Fingerhuth/"
           target="_blank"
           rel="noopener noreferrer">
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+          {link2Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-rhydon'}
+              hover={true}
+            />
+          )}
+          {!link2Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-rhydon'}
+              hover={false}
+            />
+          )}
+          Github
         </a>
-
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          onMouseEnter={() => setLink5Hover(true)}
+          onMouseLeave={() => setLink5Hover(false)}
           className={styles.card}
+          href="mailto:contact@ryanfingerhuth.com"
           target="_blank"
           rel="noopener noreferrer">
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          {link5Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-snake'}
+              hover={true}
+            />
+          )}
+          {!link5Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-snake'}
+              hover={false}
+            />
+          )}
+          Email Contact
+        </a>
+      </div>
+
+      <div className={styles.header}>
+        <Image
+          className={styles.spritePreFix}
+          src="/pkm-icon-fossil.png"
+          alt="trainer"
+          width={16}
+          height={16}
+        />
+        Fun Projects
+      </div>
+      <div className={styles.list}>
+        <a
+          onMouseEnter={() => setLink3Hover(true)}
+          onMouseLeave={() => setLink3Hover(false)}
+          className={styles.card}
+          href="https://pokemon-poster.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          {link3Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-bug'}
+              hover={true}
+            />
+          )}
+          {!link3Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-bug'}
+              hover={false}
+            />
+          )}
+          Pokemon Poster
+        </a>
+        <a
+          onMouseEnter={() => setLink4Hover(true)}
+          onMouseLeave={() => setLink4Hover(false)}
+          className={styles.card}
+          href="https://ryanfingerhuth.com"
+          rel="noopener noreferrer">
+          {link4Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-plant'}
+              hover={true}
+            />
+          )}
+          {!link4Hover && (
+            <LinkImage
+              className={styles.spritePreFix}
+              imageName={'pkm-icon-plant'}
+              hover={false}
+            />
+          )}
+          Card Collector (Coming Soon)
         </a>
       </div>
     </main>

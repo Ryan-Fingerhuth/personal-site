@@ -6,9 +6,23 @@
   font-family: 'Pokemon Generation 1';
 }
 
+.list .copyButton {
+  margin-left: 1rem;
+}
+
+.copyButton {
+  background-color: rgb(68, 65, 65);
+  border: 1px solid #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Pokemon Generation 1';
+}
+
 .list {
   display: grid;
-  grid-template-columns: repeat(1, minmax(33%, auto));
+  /* grid-template-columns: repeat(1, minmax(33%, auto)); */
   width: fit-content;
   max-width: 100%;
   margin-bottom: 1.5rem;

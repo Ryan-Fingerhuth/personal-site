@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import LinkImage from './link-image';
+import CopyButton from './copy-button';
 import styles from '@/styles/Home.module.css';
 import { useState } from 'react';
 
@@ -78,29 +79,34 @@ export default function Home() {
             )}
             Github
           </a>
-          <a
-            onMouseEnter={() => setLink5Hover(true)}
-            onMouseLeave={() => setLink5Hover(false)}
-            className={styles.card}
-            href="mailto:contact@ryanfingerhuth.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            {link5Hover && (
-              <LinkImage
-                className={styles.spritePreFix}
-                imageName={'pkm-icon-snake'}
-                hover={true}
-              />
-            )}
-            {!link5Hover && (
-              <LinkImage
-                className={styles.spritePreFix}
-                imageName={'pkm-icon-snake'}
-                hover={false}
-              />
-            )}
-            Email Contact
-          </a>
+          <div className={styles.card}>
+            <a
+              onMouseEnter={() => setLink5Hover(true)}
+              onMouseLeave={() => setLink5Hover(false)}
+              href="mailto:contact@ryanfingerhuth.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              {link5Hover && (
+                <LinkImage
+                  className={styles.spritePreFix}
+                  imageName={'pkm-icon-snake'}
+                  hover={true}
+                />
+              )}
+              {!link5Hover && (
+                <LinkImage
+                  className={styles.spritePreFix}
+                  imageName={'pkm-icon-snake'}
+                  hover={false}
+                />
+              )}
+              Email
+            </a>
+            <CopyButton
+              className={styles.copyButton}
+              copyText="contact@ryanfingerhuth.com"
+            />
+          </div>
         </div>
 
         <div className={styles.header}>

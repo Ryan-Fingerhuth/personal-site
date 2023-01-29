@@ -22,7 +22,7 @@
 
 .list {
   display: grid;
-  /* grid-template-columns: repeat(1, minmax(33%, auto)); */
+  grid-template-columns: repeat(1, minmax(33%, auto));
   width: fit-content;
   max-width: 100%;
   margin-bottom: 1.5rem;

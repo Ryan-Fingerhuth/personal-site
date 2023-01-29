@@ -101,7 +101,5 @@ a {
 
 @font-face {
   font-family: 'Pokemon Generation 1';
-  src: url('/fonts/PokemonGenerationOne.woff2') format('woff2'),
-    url('/fonts/PokemonGenerationOne.woff') format('woff'),
-    url('/fonts/PokemonGenerationOne.ttf') format('truetype');
+  src: url('/fonts/PokemonGenerationOne.woff') format('woff');
 }

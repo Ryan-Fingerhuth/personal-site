@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Pokemon Generation 1';
-  src: url('/public/PokemonGenerationOne.ttf');
+  src: url('/public/fonts/PokemonGenerationOne.ttf');
 }
 
 .list {

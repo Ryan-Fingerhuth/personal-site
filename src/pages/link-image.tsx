@@ -12,7 +12,7 @@ export default function LinkImage({
   return (
     <Image
       className={className}
-      src={`/${imageName}${hover ? '-hover' : ''}.png`}
+      src={`/images/${imageName}${hover ? '-hover' : ''}.png`}
       width={16}
       height={16}
       alt="link-image"

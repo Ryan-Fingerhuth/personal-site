@@ -44,6 +44,20 @@
   margin-right: 0.5rem;
 }
 
+.row {
+  display: flex;
+}
+
+.columnMain {
+  flex: 85%;
+  float: left;
+}
+
+.columnSecondary {
+  flex: 15%;
+  margin-top: 30%;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

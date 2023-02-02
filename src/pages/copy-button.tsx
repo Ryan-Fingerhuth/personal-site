@@ -34,7 +34,7 @@ export default function CopyButton({
         disableFocusListener
         disableHoverListener
         disableTouchListener
-        title="Copied!">
+        title="Email Copied!">
         <button className={className} onClick={handleClick}>
           Copy
         </button>

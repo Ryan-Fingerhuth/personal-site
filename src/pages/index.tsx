@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import LinkImage from './link-image';
 import CopyButton from './copy-button';
-import CounterButton from './counter-button';
+import AsciiGlobe from '@/components/AsciiGlobe';
 import styles from '@/styles/Home.module.css';
 import { useState } from 'react';
 
@@ -151,7 +151,8 @@ export default function Home() {
                 onMouseEnter={() => setLink4Hover(true)}
                 onMouseLeave={() => setLink4Hover(false)}
                 className={styles.card}
-                href="https://ryanfingerhuth.com"
+                href="https://virtual-binder.com/"
+                target="_blank"
                 rel="noopener noreferrer">
                 {link4Hover && (
                   <LinkImage
@@ -167,12 +168,12 @@ export default function Home() {
                     hover={false}
                   />
                 )}
-                Card Collector (Coming Soon)
+                Virtual Card Binder
               </a>
             </div>
           </div>
           <div className={styles.columnSecondary}>
-            {/* <CounterButton buttonClassName={styles.copyButton}></CounterButton> */}
+            <AsciiGlobe />
           </div>
         </div>
       </main>

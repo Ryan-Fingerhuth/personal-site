@@ -1,7 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 6rem 25rem;
+  padding: 6rem 2rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   min-height: 100vh;
   font-family: 'Pokemon Generation 1';
 }
@@ -46,16 +49,75 @@
 
 .row {
   display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .columnMain {
-  flex: 85%;
-  float: left;
+  flex: 1;
+  min-width: 0;
 }
 
 .columnSecondary {
-  flex: 15%;
-  margin-top: 30%;
+  flex: 0 0 auto;
+}
+
+.globe {
+  text-align: center;
+}
+
+.globeArt {
+  grid-area: 1 / 1;
+  font-family: 'Courier New', monospace;
+  font-size: clamp(5px, 0.62vw, 7.5px);
+  line-height: 1.18;
+  letter-spacing: 0;
+  white-space: pre;
+  user-select: none;
+}
+
+.globeLayers {
+  display: grid;
+  justify-content: center;
+}
+
+.globeLand {
+  color: #268344;
+}
+
+.globeOcean {
+  color: #1979bb;
+}
+
+.globeClouds {
+  color: #fff;
+  text-shadow: 0 0.5px 1px #52677b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .globeLand {
+    color: #78d992;
+  }
+
+  .globeOcean {
+    color: #55b7f3;
+  }
+}
+
+.globeToggle {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font: 12px var(--font-mono);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .globeToggle {
+    display: none;
+  }
 }
 
 /* Enable hover only on non-touch devices */
@@ -72,21 +134,14 @@
 }
 
 /* Mobile and Tablet */
-@media (max-width: 1060px) {
-  .main {
-    padding: 6rem 15rem;
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
   }
-}
 
-@media (max-width: 750px) {
-  .main {
-    padding: 6rem 10rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .main {
-    padding: 6rem 5rem;
+  .globeArt {
+    font-size: clamp(2px, 1.1vw, 7px);
   }
 }
 
